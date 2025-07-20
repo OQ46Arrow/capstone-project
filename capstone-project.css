@@ -1,0 +1,85 @@
+.body {
+  height: 100vh;
+  width: 100%;
+}
+.gradient-background {
+  background: linear-gradient(120deg, #a62c2c, #e83f25, #ea7300, #d3ca79);
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.hero-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+.interests {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+.interests > * {
+  display: inline-block;
+  margin: 2%;
+}
+.feature-image {
+  float: left;
+  margin-right: 5%;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px gray;
+}
+.feature-heading {
+  text-decoration: underline;
+}
+.feature-paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1rem;
+}
+.contact-button {
+  background-color: #d3ca79;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 5px 5px 5px gray;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  padding: 7.5px;
+  font-weight: 500;
+}
+
+@media (min-width: 344px) and (max-width: 539px) {
+  .hero-text {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .interests {
+    margin: 15%;
+  }
+  .feature-image {
+    margin-bottom: 10%;
+    display: block;
+  }
+}
+@media (min-width: 540px) and (max-width: 819px) {
+  .hero-text {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .interests {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-heading {
+    font-size: 1.25em;
+  }
+}
